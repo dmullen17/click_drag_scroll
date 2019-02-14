@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    perspective: 600px;
+
+}
+
+.panel {
+    width: 10vw;
+    height: 50vh;
+    max-width: 200px;
+    max-height: 800px;
+    border: 1px solid black;
+    opacity: .5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.panel:nth-child(odd) {
+    background: blue;
+    transform: scaleX(1.31) rotateY(40deg);
+}
+.panel:nth-child(even) {
+    background: red;
+    transform: scaleX(1.31) rotateY(-40deg);
+}
